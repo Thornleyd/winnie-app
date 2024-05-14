@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 
 def needs_pill_today():
-	today = datetime.now().date()
+	today = datetime.now()
 	start_date = datetime(2024, 5, 12).date()
 	start_date = datetime.combine(start_date, datetime.min.time())
 	days_since_start = (today - start_date).days
